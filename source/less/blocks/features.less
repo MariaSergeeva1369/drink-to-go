@@ -1,0 +1,127 @@
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 20px 60px;
+  width: 280px;
+  background-color: @base-color;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 30px 100px;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 40px 120px;
+    width: 1360px;
+  }
+}
+
+.features__chapter {
+  margin-bottom: 4px;
+}
+
+.features__title {
+  padding: 0;
+  margin: 0 0 36px;
+  text-align: center;
+  .secondary-title-style-mobile ();
+
+  @media (min-width: @tablet-width) {
+    .secondary-title-style ();
+    margin: 0 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 80px;
+  }
+}
+
+.features__list {
+  display: grid;
+  row-gap: 32px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 318px);
+    grid-template-rows: 1fr;
+  }
+}
+
+.features__item {
+  padding-top: 66px;
+  margin: 0;
+  list-style-type: none;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: auto;
+
+  &--speed {
+    background-image: url("../img/icons/features/speed.svg");
+  }
+
+  &--eco {
+    background-image: url("../img/icons/features/eco.svg");
+  }
+
+  &--energy {
+    background-image: url("../img/icons/features/energy.svg");
+  }
+
+  &--comfort {
+    background-image: url("../img/icons/features/comfort.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 72px;
+    background-position: 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 0 0 0;
+    background-position: 50% 0;
+  }
+}
+
+.features__item-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    margin: 0 0 10px;
+    .secondary-title-style-mobile ();
+  }
+
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}
+
+.features__item-description {
+  margin: 0;
+  text-align: center;
+  .main-text-style-mobile ();
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}

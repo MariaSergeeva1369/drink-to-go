@@ -1,0 +1,72 @@
+.control {
+  position: relative;
+  padding-left: 34px;
+}
+
+.control__mark {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: @base-color;
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  border: 2px solid @accent-text-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: @accent-text-color;
+    border-radius: 50%;
+  }
+}
+
+.control__input[type="radio"]:hover + .control__mark {
+  border: 2px solid #9070ec;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+  }
+}
+
+.control__input[type="radio"][disabled][checked] + .control__mark::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: @primary-grey;
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:disabled + .control__mark {
+  border: 2px solid @primary-grey;
+  background-color: @background-secondary;
+
+  &::after {
+    content: "";
+    background: @background-secondary;
+  }
+}
+
+.control__input[type="radio"]:disabled ~ .control__label {
+  color: #bdbdbd;
+}

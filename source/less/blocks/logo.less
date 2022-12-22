@@ -1,0 +1,48 @@
+.logo {
+  position: relative;
+}
+
+.logo__icon {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "Интернет-магазин кофейных напитков";
+      position: absolute;
+      top: 24px;
+      left: 190px;
+      height: 32px;
+      width: 126px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+
+    &--modified::after {
+      top: 46px;
+      left: 0;
+      width: 318px;
+      .main-text-style-mobile ();
+    }
+  }
+}
+
+.logo__icon img {
+  padding: 12px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 0;
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.logo__icon--modified img {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+  }
+}

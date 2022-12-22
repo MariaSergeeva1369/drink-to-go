@@ -1,0 +1,28 @@
+.main-block__wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0 60px;
+  background-color: @background-accent-main;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 0 0 0;
+    background: linear-gradient(to bottom, #f3ebe1 77%, #ffffff 77%, #ffffff 100%);
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+    background: @background-accent-main;
+    padding: 30px 0 60px;
+  }
+}
+
+.main-block__slider-pagination {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}

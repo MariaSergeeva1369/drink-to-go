@@ -1,0 +1,151 @@
+.slider {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.slider__slide-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    min-width: 608px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    min-width: 1280px;
+  }
+}
+
+.slider__slide-item picture {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-left: 25px;
+  }
+}
+
+.slider__main-img {
+  margin-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 476px;
+    height: 476px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.slider__feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+
+
+  @media (min-width: @tablet-width) {
+    width: 608px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 30px;
+    align-items: flex-start;
+    width: 625px;
+  }
+}
+
+.slider__feature {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @accent-text-color;
+  text-align: center;
+  margin-bottom: 4px;
+
+
+  @media (min-width: @desktop-width) {
+    margin-top: -5px;
+  }
+}
+
+.slider__product-title {
+  margin: 0 0 10px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  .main-title-style-mobile ();
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 16px;
+    .main-title-style ();
+  }
+}
+
+.slider__product-description {
+  margin: 0 0 20px;
+  text-align: center;
+  .main-text-style-mobile ();
+
+  @media (min-width: @tablet-width) {
+    .main-text-style ();
+    padding: 0 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+    padding: 0;
+    margin: 0 0 40px;
+    width: 600px;
+  }
+}
+
+.slider__order {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.slider__product-old-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: line-through;
+  color: @accent-text-color;
+  margin-right: 4px;
+}
+
+.slider__product-price {
+  margin-right: 15px;
+  .main-text-style ();
+  font-weight: 600;
+}
+
+.slider__button {
+  width: 113px;
+}

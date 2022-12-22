@@ -1,0 +1,88 @@
+.range {
+  position: relative;
+  top: 10px;
+  margin-bottom: 48px;
+  width: 280px;
+  height: 2px;
+  background-color: @primary-grey;
+
+  @media (min-width: @tablet-width) {
+    top: 6px;
+    width: 220px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  top: -1px;
+  width: 241px;
+  height: 4px;
+  background-color: @primary-medium;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 274px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: @base-color;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  z-index: 2;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: 2px;
+      border-radius: 50%;
+      background: rgba(120, 89, 207, 0.25);
+    }
+  }
+
+  &:active::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background: @accent-text-color;
+  }
+
+  &:disabled {
+    border: 2px solid #bdbdbd;
+  }
+}
+
+.range__toggle--min:disabled + .range__toggle--max:disabled ~ .range__bar {
+  background: #bdbdbd;
+}
+
+.range__toggle--min {
+  top: -10px;
+}
+
+.range__toggle--max {
+  top: -10px;
+  right: 20px;
+}

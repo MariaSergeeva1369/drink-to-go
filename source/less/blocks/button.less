@@ -1,0 +1,141 @@
+.button {
+  margin: 0;
+  padding: 8px 20px;
+  font-family: @main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-color;
+  background-color: @accent-text-color;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  &--form {
+    padding: 11px 14px;
+    font-size: 13px;
+    width: 160px;
+
+    @media (min-width: @tablet-width) {
+      padding: 8px 2px;
+      font-size: 14px;
+      text-align: center;
+      max-width: 148px;
+    }
+  }
+
+  &--form-modified {
+    background-color: @base-color;
+    color: @accent-text-color;
+
+    @media (min-width: @tablet-width) {
+      max-width: 138px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 8px 2px;
+      max-width: 150px;
+    }
+
+    &:disabled {
+      background: @primary-grey;
+    }
+  }
+
+  &--catalog {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 20px 8px 46px;
+    width: 141px;
+    background-image: url("../img/icons/decoration/add-to-cart.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 20px 12px;
+  }
+
+  &--pagination {
+    display: flex;
+    padding: 15px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: @base-color;
+    color: @accent-text-color;
+    box-sizing: border-box;
+
+    &:disabled {
+      background: @primary-grey;
+    }
+
+    &-current {
+      font-weight: 600;
+      color: @base-text-color;
+      background-color: @background-secondary;
+    }
+
+    @media (min-width: @tablet-width) {
+      &-modified {
+        padding: 10px 10px 10px 15px;
+        width: 143px;
+      }
+
+      &-first {
+        border-radius: 0 4px 4px 0;
+      }
+
+      &-last {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &-modified-back {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &-modified-next {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+
+  &--pagination svg {
+    fill: @accent-text-color;
+  }
+
+  &:disabled,
+  &:hover,
+  &:active,
+  &:focus svg {
+    fill: @base-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--pagination-modified svg {
+      display: none;
+    }
+  }
+
+  &:disabled,
+  &:hover,
+  &:active,
+  &:focus a {
+    color: @base-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @primary-medium;
+    color: @base-color;
+    outline: none;
+  }
+
+  &:active {
+    color: @base-color;
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background: #bdbdbd;
+    color: @base-color;
+  }
+}

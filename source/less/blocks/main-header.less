@@ -1,0 +1,36 @@
+.main-header__wrapper {
+  display: grid;
+  position: relative;
+  grid-template-rows: min-content;
+  grid-template-columns: min-content auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
+  }
+}
+
+.main-header__logo {
+  margin-right: 88px;
+  height: 60px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 67px;
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 308px;
+  }
+}

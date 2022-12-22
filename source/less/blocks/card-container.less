@@ -1,0 +1,22 @@
+.card-container {
+  width: 100%;
+  height: 420px;
+  min-width: 320px;
+  background-image: url("../img/content/map/map-small.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+    min-width: 768px;
+    background-image: url("../img/content/map/map_medium.jpeg");
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+    min-width: 1440px;
+    background-image: url("../img/content/map/map-big.jpeg");
+  }
+}

@@ -1,0 +1,81 @@
+.select {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-bottom: 36px;
+  }
+}
+
+.select__text {
+  margin: 0 0 0 3px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.select__select-wrapper {
+  margin: 0 0 0 8px;
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    background-image: url("../img/icons/decoration/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: 6px;
+      right: 10px;
+    }
+  }
+}
+
+.select__select {
+  font-family: @main-font;
+  padding: 4px 10px;
+  min-width: 165px;
+  width: 165px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @accent-text-color;
+  border: none;
+  background: #f8f8f8;
+
+  &:hover,
+  &:focus {
+    background-color: @secondary-accent-color;
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 0 10px;
+  }
+}
