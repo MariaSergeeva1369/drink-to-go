@@ -60,7 +60,6 @@
   font-family: @main-font;
   padding: 4px 10px;
   min-width: 165px;
-  width: 165px;
   box-sizing: border-box;
   font-weight: 600;
   font-size: 16px;
@@ -68,6 +67,8 @@
   color: @accent-text-color;
   border: none;
   background: #f8f8f8;
+  appearance: none;
+  text-align: center;
 
   &:hover,
   &:focus {
@@ -76,6 +77,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 0 10px;
+    padding: 0 25px 0 10px;
   }
 }
